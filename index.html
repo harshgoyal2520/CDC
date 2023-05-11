@@ -18,7 +18,9 @@
          // calls logout then hides the logout link if the logout succeeds
          function logout() {
          gigya.accounts.logout({callback:function (response) { if (response.errorCode == 0) {
-         document.getElementById("logout").hidden=true; }
+         document.getElementById("logout").hidden=true;
+         alert('User logged out from session');
+                                                              
          else {
          alert('Error:' + response.errorMessage);
          } }});
