@@ -8,12 +8,13 @@
    </head>
    <body>
       <a href="#"
-         onclick="gigya.accounts.showScreenSet({screenSet:'Default-LiteRegistration', startScreen:'gigya-subscribe-with-email-screen'});">Subscribe Here!</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+         onclick="gigya.accounts.showScreenSet({screenSet:'Default-LiteRegistration', startScreen:'gigya-subscribe-with-email-screen', containerID:"hello"});">Subscribe Here!</a>&nbsp;&nbsp;|&nbsp;&nbsp;
       <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-register-screen'});">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;
       <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a>
       <span id="logout" hidden>
       &nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" onclick="logout();">Logout</a>
       </span>
+      <div id="hello"></div>
       <script type="text/javascript" lang="javascript">
          // calls logout then hides the logout link if the logout succeeds
          function logout() {
