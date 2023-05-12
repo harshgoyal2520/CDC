@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
  <head><title>RBA Exercise</title>
- <SCRIPT type="text/javascript" lang="javascript" 
- src="http://cdn.gigya.com/js/gigya.js?apikey=4_dVjG583x6mg0cVH9XgbWZA">
+ <SCRIPT type="text/javascript" lang="javascript" src="http://cdn.gigya.com/js/gigya.js?apikey=4_dVjG583x6mg0cVH9XgbWZA">
  </SCRIPT>
  </head>
  <body><h1>RBA Exercise</h1>
  <h4>Register a user and then try to login with a wrong password 5 times</h4>
- <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'DefaultRegistrationLogin', startScreen:'gigya-registerscreen'});">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;
- <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'DefaultRegistrationLogin'});">Login</a>
+ <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-register-screen'});">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+ <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a>
  <span id="logout" hidden>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" 
 onclick="logout();">Logout</a></span>
  <script type="text/javascript" lang="javascript">
@@ -21,7 +20,6 @@ onclick="logout();">Logout</a></span>
  } 
  }});
  }
-78
  gigya.accounts.getAccountInfo({callback:function (response) {
  if (response.errorCode == 0) { 
  document.getElementById("logout").hidden=false;
