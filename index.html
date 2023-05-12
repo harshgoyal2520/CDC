@@ -20,11 +20,7 @@ onclick="logout();">Logout</a></span>
  } 
  }});
  }
- gigya.accounts.getAccountInfo({callback:function (response) {
- if (response.errorCode == 0) { 
- document.getElementById("logout").hidden=false;
- } 
- }}); 
+ 
  gigya.socialize.addEventHandlers({
  onLogin: function () {
  document.getElementById("logout").hidden=false;
