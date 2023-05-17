@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://cdns.gigya.com/js/gigya.js?apiKey=4_glmqsSy3Ky2a3DG8fnfSDw">
+    </script>
+</head>
+<body>
+    <script>
+        function onGigyaServiceReady() {
+          gigya.accounts.addEventHandlers({
+              onLogout: function(response) {
+                  console.log(response);
+                  alert("You have logged out from the IDP!");
+              }
+          });
+          gigya.accounts.logout();
+        }
+    </script>
+</body>
+</html>

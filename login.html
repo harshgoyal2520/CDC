@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
- <head>
- <title>My GitHub login Site</title>
- </head>
- <body>
- <h1>Hello User</h1>
- <p>Welcome to login Pages site!</p>
- </body>
+<head>
+    <script type="text/javascript" src="https://cdns.gigya.com/js/gigya.js?apiKey=4_glmqsSy3Ky2a3DG8fnfSDw">
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        gigya.socialize.addEventHandlers({
+            onLogin: function(response) {
+                console.log(response);
+                gigya.fidm.saml.continueSSO();
+            }
+        });
+ 
+        gigya.accounts.showScreenSet({
+                screenSet: 'Default-RegistrationLogin',
+                containerID: "container",
+                sessionExpiration: '20000'
+        });
+    </script>   
+</body>
 </html>
+
