@@ -3,12 +3,10 @@
  <head>
  <title>Mobile Ready Screen-Set Implementation Example</title>
  <meta name="viewport" content="width=device-width">
- <SCRIPT type="text/javascript" lang="javascript"
- src="http://cdn.gigya.com/js/gigya.js?apikey=4_dVjG583x6mg0cVH9XgbWZA"></SCRIPT>
+ <SCRIPT type="text/javascript" lang="javascript" src="https://cdns.gigya.com/js/gigya.js?apikey=4_dVjG583x6mg0cVH9XgbWZA"></SCRIPT>
  </head>
  <body>
- <a href="#"
- onclick="gigya.accounts.showScreenSet({screenSet:'Default-LiteRegistration'});">Subscribe Here!</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+ <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-LiteRegistration'});">Subscribe Here!</a>&nbsp;&nbsp;|&nbsp;&nbsp;
  <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin', startScreen:'gigya-register-screen'});">Register</a>&nbsp;&nbsp;|&nbsp;&nbsp;
  <a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a>
  <span id="logout" hidden>
@@ -17,14 +15,14 @@
  <script type="text/javascript" lang="javascript">
 // calls logout then hides the logout link if the logout succeeds
  function logout() {
- gigya.accounts.logout({callback:function (response) {
- if (response.errorCode == 0) {
- document.getElementById("logout").hidden=true;
- }
- else {
- alert('Error:' + response.errorMessage);
- }
- }});
+    gigya.accounts.logout({callback:function (response) {
+     if (response.errorCode == 0) {
+      document.getElementById("logout").hidden=true;
+     }
+     else {
+      alert('Error:' + response.errorMessage);
+     }
+    }});
  }
  // if there's a user logged in then shows the logout link
  gigya.accounts.getAccountInfo({callback:function (response) {
