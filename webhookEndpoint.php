@@ -3,12 +3,7 @@
 $c = new Cache();
 // received webhook from CDC server
 $msgHash = $_SERVER[' x-gigya-sig-jwt']; 
-if ($msgHash){
-    http_response_code(200);
-} else{
-    http_response_code(400);
-}
-/*
+
 // Get the JSON payload sent by <pname conkeyref="loio6462a25815de4de9944eff6e00266f07/cdc-long"/>.
 $messageJSON = file_get_contents('php://input');
 
@@ -41,7 +36,7 @@ if (validateJWT($msgHash,$messageJSON)) {
          ***************************************************************/
         //echo "Event Type: $curEvt \n";
         //echo "UID: $curUID \n\n";
-        /*$c->store('LogWebhookData',$messageJSON);
+        $c->store('LogWebhookData',$messageJSON);
         $c->store('LogUID',$curUID);
     }
 
@@ -52,7 +47,7 @@ if (validateJWT($msgHash,$messageJSON)) {
 
     // The hash isn't good, respond non-OK. <pname conkeyref="loio6462a25815de4de9944eff6e00266f07/cdc-long"/> will try to resend this notification at progressively longer intervals.
     http_response_code(400);
-}*/
+}
 
 
 ?>
