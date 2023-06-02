@@ -2,7 +2,7 @@
 
 $c = new Cache();
 // received webhook from CDC server
-$msgHash = $_SERVER[' x-gigya-sig-jwt']; 
+$msgHash = $_SERVER['x-gigya-sig-jwt']; 
 
 // Get the JSON payload sent by <pname conkeyref="loio6462a25815de4de9944eff6e00266f07/cdc-long"/>.
 $messageJSON = file_get_contents('php://input');
